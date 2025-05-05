@@ -554,6 +554,18 @@
       .spectacle-details {
         padding-left: 0;
       }
+
+      .about {
+        grid-template-columns: 1fr !important;
+      }
+
+      .about-image {
+        margin: 0 auto 30px !important;
+      }
+
+      .about-text {
+        text-align: center !important;
+      }
     }
     
     @media (max-width: 768px) {
@@ -565,6 +577,21 @@
       
       .contact-info {
         flex-direction: column;
+      }
+
+      .about {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+      }
+      
+      .about-image {
+        width: 250px !important;
+        margin: 0 auto !important;
+      }
+      
+      .about-text {
+        text-align: center !important;
+        padding: 0 15px !important;
       }
     }
     
@@ -659,6 +686,15 @@
     transform: translateY(-50%) scale(1.1);
 }
 
+    .about-image:hover img {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    
+    .about-image:hover div {
+      transform: scale(1.1) rotate(10deg);
+    }
+
   </style>
 </head>
 <body class="pascal-page">
@@ -692,11 +728,12 @@
   <section id="about">
     <div class="vinyl seventies-decoration" style="right: -150px; top: 50px;"></div>
     <h2 class="section-title fade-in">À propos</h2>
-    <div class="about fade-in" style="display: grid; grid-template-columns: minmax(250px, 1fr) 2fr; gap: 40px; align-items: start;">
-      <div class="about-image" style="position: relative;">
-        <img src="portrait-pascal.png" alt="Portrait de Pascal Guillaume" style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin: 0 auto; display: block;">
+    <div class="about fade-in" style="display: grid; grid-template-columns: 300px 1fr; gap: 60px; align-items: start; padding: 20px;">
+      <div class="about-image" style="position: relative; transition: all 0.4s ease-out;">
+        <img src="portrait-pascal.png" alt="Portrait de Pascal Guillaume" style="width: 100%; height: auto; display: block; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+        <div style="position: absolute; top: -15px; right: -15px; width: 120px; height: 120px; background: var(--seventies-orange); opacity: 0.1; border-radius: 50%; z-index: -1; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);"></div>
       </div>
-      <div class="about-text" style="padding: 20px 0;">
+      <div class="about-text" style="text-align: left;">
         <p>Pascal Guillaume est un artiste français aux multiples talents. Chanteur, auteur-compositeur, comédien et conteur, il explore avec passion la chanson, le théâtre et la narration. Il s'adresse tant au grand public qu'au jeune public, notamment grâce à son personnage emblématique de Monsieur Klück.</p>
         <p>Passionné par les seventies, il offre des spectacles riches et diversifiés, alliant reprises de classiques francophones et créations originales. Sa voix chaleureuse et son interprétation sincère transportent le public dans un univers musical où nostalgie et émotions se rencontrent.</p>
       </div>
