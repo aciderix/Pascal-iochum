@@ -23,9 +23,11 @@ body {
 
 .buttons-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 1.5rem;
     padding: 2rem;
+    align-items: center;
+    justify-items: center;
 }
 
 .portal-button {
@@ -72,6 +74,9 @@ body {
     border: 2px solid var(--primary-turquoise);
     font-family: "Marck Script", cursive;
     box-shadow: 0 4px 20px rgba(44, 122, 123, 0.2);
+    height: 225px; /* Réduit de 300px à 225px (25% de réduction) */
+    transform: scale(0.75);
+    transform-origin: center;
 }
 
 .pascal {
@@ -87,12 +92,16 @@ body {
     border: 2px solid var(--violet);
     box-shadow: 0 4px 20px rgba(186, 104, 200, 0.3);
     font-family: 'Porkys', cursive;
+    height: 225px; /* Réduit de 300px à 225px (25% de réduction) */
+    transform: scale(0.75);
+    transform-origin: center;
 }
 
 .vibration:hover {
     background: inherit;
     color: inherit;
     border-color: inherit;
+    transform: scale(0.75);
 }
 .vibration:hover ~ .portal-container {
     background: none;
@@ -121,7 +130,7 @@ body:has(.pascal:hover) {
 .kluck:hover {
     background: var(--violet);
     color: white;
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-10px) scale(0.8);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     border-color: transparent;
 }
@@ -360,7 +369,7 @@ body:has(.kluck:hover)::after {
 
 .welcome-title {
     text-align: center;
-    font-family: "Marck Script", cursive;
+    font-family: 'Cinzel', serif;
     font-size: 4rem;
     color: #FFFFFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -370,7 +379,7 @@ body:has(.kluck:hover)::after {
 
 body:has(.vibration:hover) .welcome-title {
     color: var(--primary-blue);
-    font-family: 'Marck Script', cursive;
+    /* Suppression du changement de police pour garder Cinzel */
 }
 
 .portal-container {

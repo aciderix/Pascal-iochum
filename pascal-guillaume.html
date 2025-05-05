@@ -410,7 +410,6 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      margin-top: 30px;
     }
     
     .contact-item {
@@ -693,9 +692,14 @@
   <section id="about">
     <div class="vinyl seventies-decoration" style="right: -150px; top: 50px;"></div>
     <h2 class="section-title fade-in">À propos</h2>
-    <div class="about fade-in">
-      <p>Pascal Guillaume est un artiste français aux multiples talents. Chanteur, auteur-compositeur, comédien et conteur, il explore avec passion la chanson, le théâtre et la narration. Il s'adresse tant au grand public qu'au jeune public, notamment grâce à son personnage emblématique de Monsieur Klück.</p>
-      <p>Passionné par les seventies, il offre des spectacles riches et diversifiés, alliant reprises de classiques francophones et créations originales. Sa voix chaleureuse et son interprétation sincère transportent le public dans un univers musical où nostalgie et émotions se rencontrent.</p>
+    <div class="about fade-in" style="display: grid; grid-template-columns: minmax(250px, 1fr) 2fr; gap: 40px; align-items: start;">
+      <div class="about-image" style="position: relative;">
+        <img src="portrait-pascal.png" alt="Portrait de Pascal Guillaume" style="width: 100%; max-width: 300px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin: 0 auto; display: block;">
+      </div>
+      <div class="about-text" style="padding: 20px 0;">
+        <p>Pascal Guillaume est un artiste français aux multiples talents. Chanteur, auteur-compositeur, comédien et conteur, il explore avec passion la chanson, le théâtre et la narration. Il s'adresse tant au grand public qu'au jeune public, notamment grâce à son personnage emblématique de Monsieur Klück.</p>
+        <p>Passionné par les seventies, il offre des spectacles riches et diversifiés, alliant reprises de classiques francophones et créations originales. Sa voix chaleureuse et son interprétation sincère transportent le public dans un univers musical où nostalgie et émotions se rencontrent.</p>
+      </div>
     </div>
   </section>
 
@@ -755,28 +759,28 @@
     <div class="vinyl seventies-decoration" style="left: -150px; top: 250px;"></div>
     <h2 class="section-title fade-in">Spectacles & Concerts</h2>
     <div class="spectacles-container">
-      <!-- Spectacle 1: Réveiller nos Chansons -->
-      <div class="spectacle fade-in">
-        <div class="spectacle-content">
-          <div class="spectacle-image">
-            <img src="./rnc.jpeg" alt="Réveiller nos Chansons">
+      <!-- Spectacle 1: Nouveautés -->
+      <div class="spectacle fade-in" style="background: linear-gradient(135deg, #1f1f1f, #2c2c2c); color: white;">
+        <div class="spectacle-content" style="grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          <div class="spectacle-image" style="position: relative;">
+            <div style="position: relative; z-index: 2;">
+              <iframe style="border-radius:12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" 
+                      src="https://open.spotify.com/embed/album/1X2Hns32O7Y2r3ufiPBi9n?utm_source=generator" 
+                      width="100%" 
+                      height="352" 
+                      frameBorder="0" 
+                      allowfullscreen="" 
+                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                      loading="lazy">
+              </iframe>
+            </div>
+            <div style="position: absolute; top: -20px; right: -20px; width: 150px; height: 150px; background: var(--seventies-orange); opacity: 0.1; border-radius: 50%; z-index: 1;"></div>
           </div>
-          <div class="spectacle-details">
-            <h3>Réveiller nos Chansons</h3>
-            <p><strong>Concert de reprises</strong> de chansons francophones des années "seventies" en duo.</p>
-            <p><strong>Programme :</strong> Thématique variée pour la programmation culturelle, animations pour seniors et festivités. Le spectacle propose des expériences d'Artistes de scène avec une prestation live acoustique.</p>
-            <p><strong>Fiche technique :</strong></p>
-            <ul>
-              <li>Voix lead, chœurs et guitares folk</li>
-              <li>Accompagnement sur bande-son</li>
-              <li>Sonorisation autonome avec 2 micros Sure SM58, guitare électro-acoustique et 2 entrées stéréo pour bandes-son</li>
-              <li>Décor en toile tendue (2,30m x 2,30m) et lumières d'ambiance</li>
-              <li>Durée : 45 minutes par set (3 sets maximum, au-delà sur devis)</li>
-            </ul>
-            <p><strong>Tarifs :</strong> Devis sur-mesure, avec possibilité de tarifs exceptionnels pour plusieurs sessions dans l'année.</p>
+          <div class="spectacle-details" style="text-align: left; padding: 20px;">
+            <h3 style="font-size: 2.5em; margin-bottom: 30px; color: var(--seventies-orange);">Nouveautés 2025</h3>
+            <h4 style="font-size: 1.8em; margin-bottom: 20px; color: white;">Si la terre</h4>
           </div>
         </div>
-        <p><strong>Sélection d'artistes repris :</strong> Antoine, Adamo, Franck Alamo, Claude François, Michel Delpech, Fugain, Polnareff, Sardou, Nino Ferrer, Jacques Dutronc, Julien Clerc, Joe Dassin, Hugues Aufray, Christophe, Françoise Hardy, Sylvie Vartan, Sacha Distel, Serge Lama, Georges Moustaki, Léo Ferré, Pierre Perret, Serge Gainsbourg, Alain Chamfort, Demis Roussos, Nana Mouskouri, Les Frères Jacques, Richard Antony, Charles Trenet.</p>
       </div>
       
       <!-- Spectacle 2: Monsieur Klück - Raconteur de Chansons -->
